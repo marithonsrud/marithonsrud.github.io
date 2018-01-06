@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <h1><img src="../Nettside%20oppgave/Asset%201.png" alt=""> </h1>
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NAKD</title>
+    <style>
+        body{
+            margin: 0;
+            display: grid;
+            min-height: 100vh;
+            grid-template-rows: auto 1fr auto;
+            font-family: sans-serif;
+        }
+        body >header {
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+        body > header > nav > a.valgt {
+            background-color: RED;
+            color: white;
+        }
+        body > header > nav > a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        body > main {
+            background-image: url(city.jgp.jpg);
+            background-size: cover;
+            background-position: center bottom;
+        }
+        * {
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            background-color: #eee;
+            font-family: sans-serif;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        main {
+            max-width: 1450px;
+            overflow: hidden;
+            margin: 0 auto; /* Midtstillingstrikset */
+            min-height: 90vh;
+            background-color: #eee;
+        }
+        .slides {
+            width: 500%;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            transition: 2s;
+        }
+        .slides > div {
+            text-align: center;
+        }
+        .slides > div > img {
+            width: 100%;
+            user-select: none;
+        }
+
+        footer {
+            width: 900px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        footer article {
+
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-right: 2px solid black;
+            border-left: 2px solid black;
+
+        }
+        body > footer {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+        }
+
+        .sjuer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .sjuer img {
+            width: 100%;
+        }
+
+        h2{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: medium;
+        }
+        #vogn {
+            height: 50px;
+            width: 50px;
+            top: 30px;
+            left: 1300px;
+            position: absolute;
+        }
+        #sok {
+            top: 40px;
+            left: 50px;
+            position: absolute;
+        }
+
+
+
+    </style>
+</head>
+
+
+<a href="handlevogn.html"><img src="Untitled-4-01.png" alt="" id="vogn" width="50" height="50"></a>
+
+<img src="searchicon.png" alt="" id="sok" width="40" height="40">
+
+
+<header>
+
+    <nav>
+        <a href="NAKD.html">HOME</a>
+        <a href="Socialfeed.html">SOCIAL FEED</a>
+        <a href="Mostwanted.html">MOST WANTED</a>
+        <a href="#">SALE</a>
+    </nav>
+
+
+</header>
+<main>
+
+
+
+    <div class="slides">
+        <div>
+            <img src="Nelly1igjen.jpeg">
+        </div>
+        <div>
+            <img src="Bilde2.png">
+        </div>
+        <div>
+            <img src="Bilde3.png">
+        </div>
+        <div>
+            <img src="Bilde4.png">
+        </div>
+    </div>
+
+
+
+
+</main>
+
+
+<script>
+    let slides = document.querySelector(".slides");
+    let marg = 0;
+    slides.onclick = function(klikk) {
+        if(klikk.clientX > innerWidth / 2) {
+            if(marg > -300){
+                marg = marg - 100;
+            } else {
+                slides.animate([
+                    {transform: "translateX(20px)"},
+                    {transform: "translateX(0)"},
+                    {transform: "translateX(10px)"},
+                    {transform: "translateX(0)"}
+                ], {
+                    duration: 200
+                });
+            }
+        } else {
+            if(marg < 0) {
+                marg = marg + 100;
+            } else {
+                slides.animate([
+                    {transform: "translateX(-20px)"},
+                    {transform: "translateX(0)"},
+                    {transform: "translateX(-10px)"},
+                    {transform: "translateX(0)"}
+                ], {
+                    duration: 200
+                });
+            }
+        }
+        slides.style.marginLeft =  marg + "%";
+    };
+</script>
+
+
+
+
+</body>
+</html>
