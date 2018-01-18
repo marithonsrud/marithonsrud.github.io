@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Last opp bilde</title>
+</head>
+<body>
+
+
+<input type="file" id="inpBilde">
+
+<script>
+    const inpBilde= document.getElementById("inpBilde")
+
+
+    function lastOppBilde () {
+        const bilde= inpBilde.files[0];
+        console.log(bilde);
+    }
+
+    inpBilde.onchange= lastOppBilde;
+
+
+</script>
+
+</body>
+</html>
