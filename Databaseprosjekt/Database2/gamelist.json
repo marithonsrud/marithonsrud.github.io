@@ -1,0 +1,78 @@
+{
+"gamelist":{
+
+   "game1":{
+     "id" : "game1",
+     "name":"BlackOps",
+     "launchDate":"11.09.2010",
+     "developers":"Treyarch, RavenSoftware, n-Space",
+     "platforms":"PlayStation, Xbox, Wii, MicrosoftWindows, NitendoDS, MacOS",
+     "poster" : "game1.jpg",
+     "trailer": "https://www.youtube.com/embed/pBm_uZidDT0"
+   },
+   "game2":{
+     "id" : "game2",
+     "name":"BlackOps2",
+     "launchDate":"11.12.2012",
+     "developers":"Treyarch, RavenSoftware, n-Space",
+     "platforms":"PlayStation, Xbox, Wii, MicrosoftWindows, NitendoDS, RavenSoftware",
+     "poster" : "game2.jpg",
+     "trailer": "https://www.youtube.com/watch?v=x3tedlWs1XY"
+   },
+   "game3":{
+     "id" : "game3",
+     "name":"BlackOps3",
+     "launchDate":"11.06.2015",
+     "developers":"Treyarch, RavenSoftware, Beenox",
+     "platforms":"PlayStation, Xbox, Wii, MicrosoftWindows, NitendoDS, MacOS",
+     "poster" : "game3.jpg",
+     "trailer": "https://www.youtube.com/watch?v=58Pspqx0XGs"
+   },
+   "game4":{
+     "id" : "game4",
+     "name":"WorldAtWar",
+     "launchDate":"11.11.2008",
+     "developers":"Treyarch, RavenSoftware, Beenox",
+     "platforms":"PlayStation, Xbox, Wii, MicrosoftWindows, ArkaneStudios, MacOS",
+     "poster" : "game4.jpg",
+     "trailer": "https://www.youtube.com/watch?v=Y_Ip_SaJqpg"
+   },
+   "game5":{
+     "id" : "game5",
+     "name":"Ghosts",
+     "launchDate":"11.05.2013",
+     "developers":"Treyarch, RavenSoftware, Beenox, Neversoft",
+     "platforms":"PlayStation, Xbox, Wii, MicrosoftWindows, ArkaneStudios, MacOS",
+     "poster" : "game5.jpg",
+     "trailer": "https://www.youtube.com/watch?v=Zxnx3W-HA18&t=50s"
+   },
+    "game6":{
+      "id" : "game6",
+      "name":"ModernWarfare",
+      "launchDate":"11.08.2011",
+      "developers":"Treyarch, RavenSoftware, Beenox, nSpace",
+      "platforms":"PlayStation, Xbox, Wii, MicrosoftWindows, ArkaneStudios, MacOS",
+      "poster" : "game6.jpg",
+      "trailer": "https://www.youtube.com/watch?v=LhuIjNSg7Gg"
+   },
+    "game7":{
+      "id" : "game7",
+      "name":"Zombies",
+      "launchDate":"11.16.2009",
+      "developers":"Treyarch, nSpace",
+      "platforms":"IOS,Android",
+      "poster" : "game7.jpg",
+      "trailer": "https://www.youtube.com/watch?v=2k8V7fF7v7s"
+   },
+   "game8":{
+     "id" : "game8",
+    "name" : "BigRedOne",
+   "launchDate":"11.01.2005",
+   "developers":"Treyarch, GrayMatter, PiStudios",
+   "platforms": "Playstation, Xbox, NintendoGameClub",
+   "poster": "game8.jpg",
+     "trailer": "https://www.youtube.com/watch?v=Km7WTQsY0Rc"
+  }
+
+}
+}
