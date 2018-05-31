@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <link rel="stylesheet" type="text/css" href="treyarch.css">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+            margin-top: 20px;
+            /*mulig dumt å bruke margin ,grunnet mobilversjon*/
+        }
+        main img {
+            width: 100%;
+        }
+
+        #searchdiv {
+            height: 40px;
+            float: right;
+        }
+
+        @media (max-width: 900px) {
+
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 640px) {
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        a.valgt {
+            background-color: grey;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<div id="searchdiv">
+
+    <input type="search" class="search-field" id="inpSearch" placeholder="Search...">
+
+</div>
+
+<header id="menyen">
+
+
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a class="valgt" href="Gameslist.html">Gamelist</a></li>
+            <li><a href="treyarch.html">Treyarch</a></li>
+        </ul>
+
+
+</header>
+
+
+    <main id="main"></main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCC-n51wf-FbqzYiyNfwpKJ30L2A9vjgO8",
+            authDomain: "games-40b57.firebaseapp.com",
+            databaseURL: "https://games-40b57.firebaseio.com",
+            projectId: "games-40b57",
+            storageBucket: "",
+            messagingSenderId: "225933679704"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+
+        const db = firebase.database();
+        const games = db.ref("gamelist");
+        const main = document.getElementById("main");
+        const inpSearch = document.getElementById("inpSearch");
+
+
+        function showGame(snap) {
+
+            let key = snap.key;
+            let game = snap.val();
+
+            main.innerHTML += `
+                <a href="details.html?id=${key}">
+                    <h1>${game.name}</h1>
+                    <img src="${game.poster}">
+                </a>
+            `;
+
+        }
+
+        games.on("child_added", showGame);
+
+        inpSearch.oninput = function() {
+
+            main.innerHTML = "";
+            games
+                .orderByChild("name")
+                .startAt(inpSearch.value)
+                .endAt(inpSearch.value + "\uf8ff")
+                .on("child_added", showGame)
+
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

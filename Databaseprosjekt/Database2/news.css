@@ -1,0 +1,92 @@
+
+#menyen > ul {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+html, body {
+    height: 100%;
+
+    margin: 0;
+}
+#content {
+
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+#left {
+
+    background: black;
+
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0.4em;
+    text-align: center;
+}
+#right {
+
+    background: black;
+
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0.4em;
+    text-align: center;
+}
+body {
+	background-color: black;
+ 
+}
+p {
+	color: white;
+
+}
+img {
+	width: 300px;
+}
+
+
+#menyen ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+
+.aa:link, .aa:visited {
+    display: block;
+
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+}
+
+.aa:hover, .aa:active {
+    background-color: gray;
+}
+
+h3 {
+    font-family: spratt;
+    color: red;
+
+}
+
+.valgt {
+    background-color: grey !important;
+}
+
+@media (max-width: 800px) {
+
+    #content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+ @font-face { font-family: spratt; src: url('spratt.ttf'); } 
+    

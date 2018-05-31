@@ -1,0 +1,73 @@
+body {
+	background-color: black;
+}
+
+#bildehead {
+	width: 100%;
+	order: 2;
+	flex-basis: 100%;
+	
+	display: flex;
+}
+
+#menyen {
+	width: 100%
+	order: 1;
+	flex-basis: 100%;
+	
+	display: flex;
+}
+#menyen > ul {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    width: 100%;
+}
+
+#bg {
+	width: 100%;
+	height: 650px;
+	flex-basis: 100%;
+	position: absolute;
+	display: flex;
+}
+#teksthead {
+	position: relative;
+	text-align: center;
+	order: 3;
+	top: 175px;
+}
+h1 {
+	color: white;
+	font-size: 90px;
+	font-family: spratt
+	
+}
+ @font-face { font-family: spratt; src: url('spratt.ttf'); } 
+
+
+
+
+
+            
+
+            a:link, a:visited {
+                display: block;
+
+                font-weight: bold;
+                color: white;
+                background-color: black;
+                text-align: center;
+                padding: 4px;
+                text-decoration: none;
+                text-transform: uppercase;
+          
+
+            }
+
+            a:hover, a:active {
+                background-color: gray;
+			
+
+            }

@@ -1,0 +1,92 @@
+th, .h, .i {
+  border: 2px solid orange;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+#lead {
+    width: 100%;
+
+}
+
+.pop, .bla {
+    border: 2px solid red;
+    text-align: right;
+    background-color: black;
+    color: white;
+}
+
+#list {
+    width: 19%;
+}
+
+body {
+    background-color: black;
+}
+
+p, text, .mon {
+    color: white;
+}
+
+h1, h3 {
+    font-family: spratt;
+    color: red;
+}
+
+@font-face { font-family: spratt; src: url('spratt.ttf'); } 
+
+h1, h3, label, p, form {
+    text-align: center;
+}
+
+th {
+    color: red;
+}
+
+label {
+    color: white;
+}
+
+#mim {
+    text-align: center;
+}
+
+ul {
+
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                display: flex;
+}
+
+
+            
+
+            .lit { 
+   
+                float: left;
+     display: flex;
+}
+            
+
+            a:link, a:visited {
+                display: block;
+                width: 308px;
+                font-weight: bold;
+                color: white;
+                background-color: black;
+                text-align: center;
+                padding: 4px;
+                text-decoration: none;
+                text-transform: uppercase;
+          
+
+            }
+
+            a:hover, a:active {
+                background-color: gray;
+			
+
+            }

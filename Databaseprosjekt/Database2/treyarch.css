@@ -1,0 +1,100 @@
+#menyen > ul {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#menyen > ul > li {
+    text-align: center;
+}
+
+body {
+    background-color: black;
+
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#lefty {
+    text-align: center;
+}
+
+#righty {
+    text-align: right;
+}
+
+h1, p, h2, h3 {
+    color: white;
+}
+
+
+
+#twitt, #face, #yt {
+    width: 20px;
+    height: 20px;
+}
+
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+li {
+
+
+}
+
+a:link, a:visited {
+    display: block;
+
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+a:hover, a:active {
+    background-color: gray;
+
+}
+
+#bild {
+    width: 50%;
+    animation-name: spin;
+    animation-duration: 10s;
+    flex-basis: flex;
+    flex-wrap: wrap;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(180deg);
+    }
+    20% {
+        transform: rotate(360deg);
+    }
+    40% {
+        transform: rotate(540deg);
+    }
+    60% {
+        transform: rotate(720deg);
+    }
+    80% {
+        transform: rotate(900deg);
+    }
+    100% {
+        transform: rotate(1080deg);
+    }
+}

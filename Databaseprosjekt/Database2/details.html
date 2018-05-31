@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+
+    <link rel="stylesheet" type="text/css" href="bo.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    
+    <style>
+
+        body {
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        img{
+
+        }
+        iframe {
+            width: 100%;
+            padding-bottom: 50px;
+
+        }
+
+        main {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Pangolin', cursive;
+        }
+
+        main > article > section > article {
+            padding-top: 15px;
+        }
+
+        main > article > section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 20px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        @media (max-width: 700px){
+
+            main > article > section {
+                grid-template-columns: 1fr;
+            }
+
+            main > article > section > div > img {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header id="menyen">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="Gameslist.html">Gamelist</a></li>
+        <li><a href="treyarch.html">Treyarch</a></li>
+    </ul>
+</header> 
+
+    <main id="main"></main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCC-n51wf-FbqzYiyNfwpKJ30L2A9vjgO8",
+            authDomain: "games-40b57.firebaseapp.com",
+            databaseURL: "https://games-40b57.firebaseio.com",
+            projectId: "games-40b57",
+            storageBucket: "",
+            messagingSenderId: "225933679704"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+
+        const db = firebase.database();
+        const games = db.ref("gamelist");
+        const main = document.getElementById("main");
+
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var id = url.searchParams.get("id");
+
+        function showGame(snap) {
+
+            let key = snap.key;
+            let game = snap.val();
+
+            main.innerHTML += `
+                <article>
+                    <h1>${game.name}</h1>
+                    <iframe width="1000" height="500" src="${game.trailer}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <section>
+                        <div>
+                            <img src="${game.poster}">
+                        </div>
+                        <article>
+                            <p><span class="red">Developers: </span>${game.developers}</p>
+                            <p><span class="red">LaunchDate: </span>${game.launchDate}</p>
+                            <p><span class="red">Platforms: </span>${game.platforms}</p>
+                        </article>
+                    </section>
+                </article>
+            `;
+
+        }
+
+        games
+            .orderByChild("id")
+            .equalTo(id)
+            .on("child_added", showGame);
+
+
+    </script>
+</body>
+</html>
