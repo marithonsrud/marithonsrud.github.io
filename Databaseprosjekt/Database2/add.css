@@ -1,0 +1,33 @@
+body {
+	background-color: black;
+	flex-wrap: wrap;
+	flex-basis: flex;
+}
+form, label {
+	text-align: center;
+	color: white;
+}
+table {
+	width: 25%;
+}
+tr, .a {
+	background-color: black;
+	color: white;
+	border: 2px solid red;
+	text-align: right;
+}
+.b {
+	background-color: black;
+	color: white;
+	border: 2px solid red;
+	text-align: center;
+}
+text {
+	color: white;
+}
+h3 {
+	text-align: center;
+	color: red;
+	font-family: spratt;
+}
+@font-face { font-family: spratt; src: url('spratt.ttf'); } 
